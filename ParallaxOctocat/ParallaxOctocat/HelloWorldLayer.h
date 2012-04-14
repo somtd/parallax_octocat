@@ -16,8 +16,16 @@
     CCSprite *background_;
     CCSprite *octocat_;
     CCSprite *octocatShadow_;
+    CCSprite *buil1_;
+    CCSprite *buil2_;
+ 
+    CGPoint center_;
+    CGPoint bgVelocity_;
+    CGPoint octocatVelocity_;
+    CGPoint b1Velocity_;
+    CGPoint b2Velocity_;
     
-    CCLabelTTF *label_;
+    //octocatShadow
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
