@@ -55,6 +55,12 @@
     b1Velocity_.x = (b1Velocity_.x * b1Deceleration) + (acceleration.y * b1Sensitivity);
     b2Velocity_.x = (b2Velocity_.x * b2Deceleration) + (acceleration.y * b2Sensitivity);
     
+    octocatVelocity_.y = (octocatVelocity_.y * ocDeceleration) + (acceleration.x * ocSensitivity);
+    bgVelocity_.y = (bgVelocity_.y * bgDeceleration) + (acceleration.x * bgSensitivity);
+    b1Velocity_.y = (b1Velocity_.y * b1Deceleration) + (acceleration.x * b1Sensitivity);
+    b2Velocity_.y = (b2Velocity_.y * b2Deceleration) + (acceleration.x * b2Sensitivity);
+
+    
     //オクトキャットの最大速度の制限
     if (octocatVelocity_.x > ocMaxVelocity) 
     {
@@ -227,8 +233,8 @@
         float shadowY = (screenSize.height / 2 - octocatHeight /2);
         background_.position = center_;
         octocat_.position = center_;
-        buil1_.position = CGPointMake(screenSize.width *3 / 8, screenSize.height *2 / 3);
-        buil2_.position = CGPointMake(screenSize.width *5 / 8, screenSize.height *2 / 3);
+        buil1_.position = CGPointMake(screenSize.width / 2, screenSize.height *2 / 3);
+        buil2_.position = CGPointMake(screenSize.width / 2, screenSize.height *2 / 3);
         octocatShadow_.position = CGPointMake(screenSize.width / 2, shadowY);
     
         //一定間隔で位置がアップデートされるようにセットアップする。
