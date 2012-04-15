@@ -16,14 +16,21 @@
     CCSprite *background_;
     CCSprite *octocat_;
     CCSprite *octocatShadow_;
+    CCSprite *speeder_;
+    CCSprite *speederShadow_;
     CCSprite *buil1_;
     CCSprite *buil2_;
  
     CGPoint center_;
     CGPoint bgVelocity_;
     CGPoint octocatVelocity_;
+    CGPoint ocShadowVelocity_;
+    CGPoint speederVelocity_;
+    CGPoint spShadowVelocity_;
     CGPoint b1Velocity_;
     CGPoint b2Velocity_;
+    
+    float shadowY_;
     
     //octocatShadow
 }
